@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Quicksand:wght@300&display=swap');
+
+body {
+  color: #fff;
+  background: linear-gradient(-45deg, #001739, #001540, #061146, #130a4a, #21004c);
+	background-size: 400% 400%;
+	animation: gradient 5s linear infinite;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center !important;
+  overflow: hidden;
+  position: relative;
+  display: flex !important;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes gradient {
+	0%   {background-position: 0% 50%;}
+	50%  {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
+
+body::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  background-image: url(../assets/astronaut.svg);
+  background-position: -100px 70px;
+  background-repeat: no-repeat;
+  height: 97vh;
+  animation: astro-move 30s linear infinite;
+}
+
+.container {
+  overflow: hidden;
+  padding: 1rem!important;
+  position: relative;
+  max-width: 42em;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  flex-direction: column!important;
+  width: 100%!important;
+  display: flex!important;
+  box-sizing: border-box;
+}
+
+@keyframes astro-move {
+	0%   {background-position: 0% 50%;
+        transform: scale(1);}
+	50%  {background-position: 20% 300px;
+        transform: scale(2);}
+  100% {background-position: 0% 50%;
+        transform: scale(1);}
+}
+
+h1 {
+  text-shadow: 2px 3px 0px rgb(200, 30, 255) ;
+  font-weight: 200;
+  font-size: 2.5rem;
+  font-family: 'Black Han Sans', sans-serif;
+  margin-top: 5%
+}
+div.calculator {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+}
+
+
+
+.btn-grad {
+   background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   border-radius: 25px;
+   display: block;
+   margin: 0 auto;
+   border-color: #00c9b7 !important;
+   border-style: solid !important;
+   font-size: 1em;
+   font-family: 'Black Han Sans', sans-serif;
+   text-shadow: 2px 3px 0px rgba(0, 0, 0, 0.5);
+
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ input[type=text], select.custom_select {
+   background: none;
+   border: 1px solid #fff;
+   border-radius: 10px;
+   padding: 10px;
+   box-sizing: border-box;
+   margin: 0 10px;
+   text-align: center;
+   color: #fff;
+   outline: none;
+   transition: 1s;
+   font-size: 1em;
+ }
+
+ input[type=text]:focus {
+   background: rgba(0,0,0,0.1) !important;
+   border: 1px solid rgba(255,255,255,0.1)
+
+ }
+
+select.custom_select option {
+  color: #000;
+  font-size: 0.7em;
+}
+
+#resultado {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resultado div {
+  background-image: linear-gradient(to bottom, #d8c500, #d9ce27, #dad73e, #dbe050, #dde962);
+  color: #000;
+  font-size: 1.5em;
+  max-width: 700px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+p.description {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+footer {
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  div.calculator {
+    background-color: rgba(6, 17, 70, 0.9);
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+}

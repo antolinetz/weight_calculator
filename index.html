@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tu peso en el sistema solar</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+
+      <h1>Vamos a calcular tu peso en nuestro sistema solar!</h1>
+      <p class="description">Tu peso en Marte o Júpiter es diferente de tu peso en la Tierra</p>
+
+      <div class="calculator">
+        <p>Ingresa tu peso <input type="text" id="peso_user" value="" size="1"/> </p>
+        <p>Elije un planeta
+        <select name="planeta" id="select_planeta"class="custom_select">
+          <option value="" selected disabled hidden>Elige</option>
+          <option value="mercurio" >Mercurio</option>
+          <option value="venus">Venus</option>
+          <option value="marte">Marte</option>
+          <option value="saturno">Saturno</option>
+          <option value="jupiter">Júpiter</option>
+          <option value="urano">Urano</option>
+          <option value="neptuno">Neptuno</option>
+        </select>
+        </p>
+        <input type="button" id="botoncito" value="A pesarnos!" class="btn-grad "/>
+      </div>
+
+
+      <br>
+      <div class="" id="resultado">
+        <!--en este div va el resultado a través del metodo innerHTML-->
+      </div>
+
+    </div>
+
+    <footer>Diseño y programación con mucho ❤ por @antolinetz - 2022</footer>
+<script src="js/calculador_de_peso.js">
+</script>
+  </body>
+</html>
